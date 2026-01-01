@@ -54,7 +54,7 @@ def summarize_session(messages):
     return summary[:512]
 
 def main():
-    repo_root = Path("/home/mischa/M-Gemini")
+    repo_root = Path(__file__).parent.parent
     chat_logs_dir = repo_root / "chat_logs"
     journals_dir = repo_root / "journals"
     
