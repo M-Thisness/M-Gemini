@@ -44,20 +44,38 @@ def redact_json_structure(data):
         return data
 
 def sync_antigravity_files():
-    """Syncs .pb files from Antigravity."""
+    """Syncs .pb files and readable markdown from Antigravity."""
     dest_dir = ANTIGRAVITY_DEST
     os.makedirs(dest_dir, exist_ok=True)
     
-    if not ANTIGRAVITY_SRC.exists():
-        print(f"Antigravity source not found: {ANTIGRAVITY_SRC}")
-        return
+    # Sync .pb files (encrypted/binary)
+    if ANTIGRAVITY_SRC.exists():
+        print(f"Syncing Antigravity files from {ANTIGRAVITY_SRC}...")
+        for file_path in ANTIGRAVITY_SRC.glob("*.pb"):
+            shutil.copy2(file_path, dest_dir / file_path.name)
+            
+    # Sync Brain Task Logs (Readable MD)
+    brain_dir = HOME / ".gemini/antigravity/brain"
+    if brain_dir.exists():
+        print(f"Syncing Brain logs from {brain_dir}...")
+        for root, dirs, files in os.walk(brain_dir):
+            for file in files:
+                if file == "task.md":
+                    # Extract UUID from parent folder name
+                    uuid = Path(root).name
+                    # Create destination: antigravity-data/brain/<UUID>.md
+                    brain_dest = dest_dir / "brain"
+                    os.makedirs(brain_dest, exist_ok=True)
+                    shutil.copy2(os.path.join(root, file), brain_dest / f"{uuid}.md")
 
-    print(f"Syncing Antigravity files from {ANTIGRAVITY_SRC}...")
-    count = 0
-    for file_path in ANTIGRAVITY_SRC.glob("*.pb"):
-        shutil.copy2(file_path, dest_dir / file_path.name)
-        count += 1
-    print(f"Synced {count} .pb files.")
+    # Sync Scratch Chat Logs (Readable MD)
+    scratch_log = HOME / ".gemini/antigravity/scratch/chat_logs/chat_log.md"
+    if scratch_log.exists():
+        print(f"Syncing Scratch chat log...")
+        scratch_dest = dest_dir / "scratch"
+        os.makedirs(scratch_dest, exist_ok=True)
+        shutil.copy2(scratch_log, scratch_dest / "chat_log.md")
+
 
 def sync_json_logs():
     """Syncs and REDACTS .json logs from tmp directories."""
