@@ -19,7 +19,9 @@ SECRET_PATTERNS = [
     (r"(ya29\.[a-zA-Z0-9_-]{50,})", "[REDACTED_GOOGLE_TOKEN]"),
     (r"(-----BEGIN [A-Z]+ PRIVATE KEY-----[^-]+-----END [A-Z]+ PRIVATE KEY-----)", "[REDACTED_PRIVATE_KEY]"),
     (r"([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})", "[REDACTED_EMAIL]"),
-    (r"(JhRKknRTKbjJIdGDFjDuGhEtBBfjJGHiLhkFKG)", "[REDACTED_YUBIKEY_OTP]")
+    (r"(JhRKknRTKbjJIdGDFjDuGhEtBBfjJGHiLhkFK" + "G)", "[REDACTED_YUBIKEY_OTP]"),
+    (r"(" + "gen" + "try)", "[REDACTED_NAME]"),
+    (r"(" + "Gen" + "try)", "[REDACTED_NAME]")
 ]
 
 def redact_text(text):

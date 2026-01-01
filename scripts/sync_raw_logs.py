@@ -15,9 +15,9 @@ from datetime import datetime
 HOME = Path.home()
 GEMINI_TMP = HOME / ".gemini/tmp"
 REPO_ROOT = Path(__file__).parent.parent
-CHAT_LOGS_DEST = REPO_ROOT / "CHAT_LOGs"
+CHAT_LOGS_DEST = REPO_ROOT / "chat_logs"
 
-# Comprehensive secret and PII patterns (Same as M-Claude)
+# Comprehensive secret and PII patterns
 SECRET_PATTERNS = [
     # API Keys & Tokens
     (r"(sk-[a-zA-Z0-9]{20,})", "[REDACTED_API_KEY]"),
@@ -31,21 +31,21 @@ SECRET_PATTERNS = [
     (r"(-----BEGIN RSA PRIVATE KEY-----)", "[REDACTED_RSA_KEY_HEADER]"),
 
     # Email addresses (PII)
-    (r"([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})", "[REDACTED_EMAIL]"),
+    (r"(?<!\\)(\b[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}\b)", "[REDACTED_EMAIL]"),
 
     # Phone numbers (PII) - Made stricter to avoid matching timestamps/UUIDs
     # Must have at least 10 digits total and include separators or +
-    (r"(\+\d{1,3}[-.\s]?\d{1,14})", "[REDACTED_PHONE]"),
-    (r"(\b\d{3}[-.]\d{3}[-.]\d{4}\b)", "[REDACTED_PHONE]"),
+    (r"(?<!\\)(\+\d{1,3}[-.\s]?\d{1,14})", "[REDACTED_PHONE]"),
+    (r"(?<!\\)(\b\d{3}[-.]\d{3}[-.]\d{4}\b)", "[REDACTED_PHONE]"),
 
     # Credit card numbers (PII)
-    (r"(\b\d{4}[-\s]\d{4}[-\s]\d{4}[-\s]\d{4}\b)", "[REDACTED_CARD]"),
+    (r"(?<!\\)(\b\d{4}[-\s]\d{4}[-\s]\d{4}[-\s]\d{4}\b)", "[REDACTED_CARD]"),
 
     # SSN-like patterns (PII)
-    (r"(\b\d{3}-\d{2}-\d{4}\b)", "[REDACTED_SSN]"),
+    (r"(?<!\\)(\b\d{3}-\d{2}-\d{4}\b)", "[REDACTED_SSN]"),
 
     # IP Addresses (potentially sensitive) - Use \b to avoid matching version numbers loosely
-    (r"(\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b)", "[REDACTED_IP]"),
+    (r"(?<!\\)(\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b)", "[REDACTED_IP]"),
 
     # JWT tokens
     (r"(eyJ[a-zA-Z0-9_-]{10,}\.[a-zA-Z0-9_-]{10,}\.[a-zA-Z0-9_-]{10,})", "[REDACTED_JWT]"),
@@ -56,7 +56,7 @@ SECRET_PATTERNS = [
     (r"(secret\s*[:=]\s*['\"]?[^\s'\"]{20,}['\"]?)", "secret=[REDACTED]"),
     (r"(api_key\s*[:=]\s*['\"]?[^\s'\"]{20,}['\"]?)", "api_key=[REDACTED]"),
 
-    # YubiKey OTP
+    # YubiKey OTP (obfuscated in script)
     (r"(JhRKknRTKbjJIdGDFjDuGhEtBBfjJGHiLhkFK" + "G)", "[REDACTED_YUBIKEY_OTP]"),
 
     # Database connection strings
@@ -67,6 +67,10 @@ SECRET_PATTERNS = [
     # File paths that might contain usernames
     (r"(/home/[a-zA-Z0-9_-]+)", "/home/[USER]"),
     (r"(/Users/[a-zA-Z0-9_-]+)", "/Users/[USER]"),
+
+    # Specific PII blockers (obfuscated in script)
+    (r"(" + "gen" + "try)", "[REDACTED_NAME]"),
+    (r"(" + "Gen" + "try)", "[REDACTED_NAME]"),
 ]
 
 def redact_text(text):

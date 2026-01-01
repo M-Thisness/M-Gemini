@@ -15,16 +15,29 @@ def get_time_of_day(hour):
 
 def summarize_session(messages):
     # Find user prompts to understand what was requested
-    prompts = [msg.get('content', '') for msg in messages if msg.get('type') == 'user' and msg.get('content')]
+    prompts = [msg.get('content', '').strip() for msg in messages if msg.get('type') == 'user' and msg.get('content')]
     if not prompts:
-        return "Collaborative session with no documented user prompts."
+        return "Collaborative session."
     
-    # Very simple summary: just take the first few words of the first prompt
-    # In a real scenario, we might use a LLM, but here I'll just be descriptive.
-    summary = prompts[0][:200]
-    if len(prompts) > 1:
-        summary += " ... and further tasks."
-    return summary[:280]
+    # Deduplicate while preserving order, taking just the first line of each prompt
+    seen = set()
+    unique_prompts = []
+    for p in prompts:
+        # Get first line, truncate if too long
+        first_line = p.split('\n')[0][:100].strip()
+        if first_line and first_line not in seen:
+            unique_prompts.append(first_line)
+            seen.add(first_line)
+            
+    # Return up to 5 distinct actions as a bulleted list
+    summary_lines = []
+    for p in unique_prompts[:5]:
+        summary_lines.append(f"- {p}")
+        
+    if len(unique_prompts) > 5:
+        summary_lines.append(f"- ... ({len(unique_prompts) - 5} more interactions)")
+        
+    return "\n".join(summary_lines)
 
 def main():
     repo_root = Path("/home/mischa/M-Gemini")
