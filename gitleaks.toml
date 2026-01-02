@@ -23,6 +23,7 @@ minVersion = "v8.25.0"
 description = "global allow lists"
 paths = [
     '''gitleaks\.toml''',
+    '''Archives/.*''',
     '''chat_logs_raw/.*''',
     '''chat_logs_markdown/.*''',
     '''FULL_CHAT_LOG\.md''',

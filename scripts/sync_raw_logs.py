@@ -10,7 +10,7 @@ HOME = Path.home()
 GEMINI_TMP = HOME / ".gemini/tmp"
 SOURCE_ID = "legion-windows"
 REPO_ROOT = Path(__file__).parent.parent
-CHAT_LOGS_DEST = REPO_ROOT / "chat_logs_raw"
+CHAT_LOGS_DEST = REPO_ROOT / "Archives"
 
 SECRET_PATTERNS = [
     (r"(sk-[a-zA-Z0-9]{20,})", "[REDACTED_API_KEY]"),

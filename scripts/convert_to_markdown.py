@@ -99,7 +99,7 @@ def convert_json_to_markdown(json_path: Path, output_dir: Path) -> Dict[str, Any
 
 def main():
     project_root = Path(__file__).parent.parent
-    chat_logs_dir, output_dir = project_root / 'chat_logs_raw', project_root / 'chat_logs_markdown'
+    chat_logs_dir, output_dir = project_root / 'Archives', project_root / 'Archives'
     output_dir.mkdir(exist_ok=True)
     sessions = []
     for json_path in chat_logs_dir.glob('*.json'):

@@ -62,7 +62,7 @@ def summarize_session(messages):
 
 def main():
     repo_root = Path(__file__).parent.parent
-    chat_logs_dir, journals_dir = repo_root / "chat_logs_raw", repo_root / "journals"
+    chat_logs_dir, journals_dir = repo_root / "Archives", repo_root / "journals"
     daily_data = defaultdict(lambda: defaultdict(list))
     for json_file in chat_logs_dir.glob("*.json"):
         try:
