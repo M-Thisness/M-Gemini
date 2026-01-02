@@ -25,7 +25,6 @@ paths = [
     '''gitleaks\.toml''',
     '''chat_logs_raw/.*''',
     '''chat_logs_markdown/.*''',
-    '''antigravity-data/.*''',
     '''FULL_CHAT_LOG\.md''',
     '''journals/.*''',
     '''raw_data/.*''',
