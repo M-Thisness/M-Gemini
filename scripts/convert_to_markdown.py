@@ -36,23 +36,47 @@ def format_tool_summary(tool: Dict[str, Any]) -> str:
 
 def format_gemini_message(msg: Dict[str, Any]) -> str:
     output = []
-    content = msg.get('content', '').strip()
-    if content:
-        output.append(f"🤖: {content}\n")
     
-    # Thoughts
+    # Thoughts (collapsed visual using blockquote)
     thoughts = msg.get('thoughts', [])
     for t in thoughts:
         desc = t.get('description', '')
         summary = t.get('subject') or (desc[:50] + "...")
-        output.append(f"- <details><summary>🧠 {summary}</summary>{desc}</details>")
+        # Use blockquote for thinking to keep it distinct but readable
+        output.append(f"> 🧠 **{summary}**\n> {desc}\n")
         
-    # Tools
+    # Tools (collapsed visual using blockquote)
     for tool in msg.get('toolCalls', []):
         summary = format_tool_summary(tool)
-        details = json.dumps(tool.get('args', {}), indent=2)
+        # Compact tool info
+        output.append(f"> 🛠️ **{summary}**")
+        
+        # Args - summarized or full? User wanted compact.
+        # Let's put args in a code block inside the quote if needed, or just keep it simple.
+        # For LLM context, full args are useful. For human reading, summary is better.
+        # Let's try a hybrid:
+        # > 🛠️ Ran `winget search`
+        # > Input: `winget search Playnite`
+        # > Output: `Found Playnite...`
+        
+        args = tool.get('args', {})
+        cmd = args.get('CommandLine') or args.get('command')
+        if cmd:
+            output.append(f"> ` {cmd} `")
+        
         result = tool.get('resultDisplay') or tool.get('result') or 'Done'
-        output.append(f"- <details><summary>🛠️ {summary}</summary>\n\n  **Input**:\n  ```json\n{details}\n  ```\n  **Output**:\n  > {str(result)[:500]}\n  </details>")
+        result_str = str(result).strip()
+        if result_str:
+            # Truncate long outputs for readability, LLMs can handle truncation contextually usually
+            # unless we need full logs. User asked for "clean".
+            preview = result_str[:200].replace('\n', ' ') + ('...' if len(result_str) > 200 else '')
+            output.append(f"> -> *{preview}*")
+        
+        output.append("") # Spacer
+        
+    content = msg.get('content', '').strip()
+    if content:
+        output.append(f"🤖: {content}\n")
 
     return '\n'.join(output) + '\n\n'
 
