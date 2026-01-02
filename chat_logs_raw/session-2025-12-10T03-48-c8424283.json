@@ -1,0 +1,39 @@
+{
+  "sessionId": "c8424283-c298-4615-acde-b0dd941443e1",
+  "projectHash": "c2d2cd48efcbba4c2bc221e72bcce69434e9ae8cd4d927badfe83e3426b39c95",
+  "startTime": "2025-12-10T03:49:19.263Z",
+  "lastUpdated": "2025-12-10T03:49:44.633Z",
+  "messages": [
+    {
+      "id": "0c4c9159-499d-4824-9e49-e2bfadd22fea",
+      "timestamp": "2025-12-10T03:49:19.263Z",
+      "type": "user",
+      "content": "how to edit gemini.md file"
+    },
+    {
+      "id": "e7e4e547-659b-45b9-bca0-a0cf175caa75",
+      "timestamp": "2025-12-10T03:49:20.143Z",
+      "type": "error",
+      "content": "[API Error: You have exhausted your daily quota on this model.]"
+    },
+    {
+      "id": "df683f31-28de-40c8-86ea-e9a3343f889c",
+      "timestamp": "2025-12-10T03:49:42.884Z",
+      "type": "info",
+      "content": "Gemini CLI update available! 0.19.4 \u2192 0.20.0\nInstalled with npm. Attempting to automatically update now..."
+    },
+    {
+      "id": "f5d5529c-d14c-4e8e-b304-b7541ff13cc2",
+      "timestamp": "2025-12-10T03:49:43.616Z",
+      "type": "user",
+      "content": "what did I use today?"
+    },
+    {
+      "id": "fd5af600-4828-4123-a08b-005f614005d1",
+      "timestamp": "2025-12-10T03:49:44.633Z",
+      "type": "error",
+      "content": "[API Error: You have exhausted your daily quota on this model.]"
+    }
+  ],
+  "source": "legion-windows"
+}

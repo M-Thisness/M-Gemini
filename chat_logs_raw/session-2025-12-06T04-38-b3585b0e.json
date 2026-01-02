@@ -1,0 +1,27 @@
+{
+  "sessionId": "b3585b0e-0b64-4f54-8aba-b18acace99ec",
+  "projectHash": "c2d2cd48efcbba4c2bc221e72bcce69434e9ae8cd4d927badfe83e3426b39c95",
+  "startTime": "2025-12-06T04:39:40.620Z",
+  "lastUpdated": "2025-12-06T04:55:20.263Z",
+  "messages": [
+    {
+      "id": "fb8fbf9a-08cc-4c05-b064-d6bda0990fc8",
+      "timestamp": "2025-12-06T04:39:40.620Z",
+      "type": "info",
+      "content": "Update successful! The new version will be used on your next run."
+    },
+    {
+      "id": "76c0aa65-31fb-4ef5-86b2-d30cd2de90b6",
+      "timestamp": "2025-12-06T04:55:20.252Z",
+      "type": "info",
+      "content": "\n\nCode Assist login required.\nAttempting to open authentication page in your browser.\nOtherwise navigate to:\n\nhttps://accounts.google.com/o/oauth2/v2/auth?redirect_uri=http%3A%2F%2Flocalhost%3A61288%2Foauth2callback&access_type=offline&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&state=e360144cc60f7afdb8c61683e506fb07fcccc7c5691587671e0d442f16169782&response_type=code&client_id=681255809395-oo8ft2oprdrnp9e3aqf6av3hmdib135j.apps.googleusercontent.com\n\n\n"
+    },
+    {
+      "id": "a46db638-38ef-47f7-bd83-ff3493a240bf",
+      "timestamp": "2025-12-06T04:55:20.263Z",
+      "type": "info",
+      "content": "Waiting for authentication...\n"
+    }
+  ],
+  "source": "legion-windows"
+}

@@ -1,0 +1,21 @@
+{
+  "sessionId": "89ad2f7c-449f-4d72-ad16-4fa95375dc06",
+  "projectHash": "c2d2cd48efcbba4c2bc221e72bcce69434e9ae8cd4d927badfe83e3426b39c95",
+  "startTime": "2025-12-12T21:44:44.407Z",
+  "lastUpdated": "2025-12-12T21:45:13.116Z",
+  "messages": [
+    {
+      "id": "cfaa6c22-b76d-4a84-b487-91f9fb7f8b30",
+      "timestamp": "2025-12-12T21:44:44.407Z",
+      "type": "user",
+      "content": "find lograd.tar"
+    },
+    {
+      "id": "bcc1578a-a211-4fdc-96a6-d01116386b3d",
+      "timestamp": "2025-12-12T21:45:13.116Z",
+      "type": "error",
+      "content": "[API Error: exception TypeError: fetch failed sending request]"
+    }
+  ],
+  "source": "legion-windows"
+}

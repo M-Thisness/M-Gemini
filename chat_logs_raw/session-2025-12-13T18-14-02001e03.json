@@ -1,0 +1,50 @@
+{
+  "sessionId": "02001e03-e724-423c-897b-3d247adb3b6d",
+  "projectHash": "c2d2cd48efcbba4c2bc221e72bcce69434e9ae8cd4d927badfe83e3426b39c95",
+  "startTime": "2025-12-13T18:14:41.857Z",
+  "lastUpdated": "2025-12-25T11:02:28.135Z",
+  "messages": [
+    {
+      "id": "d80116f1-7cf8-4181-aadd-0799b6761648",
+      "timestamp": "2025-12-13T18:14:41.857Z",
+      "type": "user",
+      "content": "hi"
+    },
+    {
+      "id": "d98dc3f5-d659-4950-b71b-51c05fff26ee",
+      "timestamp": "2025-12-13T18:14:43.848Z",
+      "type": "gemini",
+      "content": "Hello! How can I help you today?",
+      "thoughts": [
+        {
+          "subject": "Crafting an initial response",
+          "description": "I've just processed the user's \"hi\" and am now focused on formulating a polite greeting. I'm considering the best way to ask how I can assist, while keeping the response natural and professional. I'll need to make sure the user feels acknowledged and that their request is understood.",
+          "timestamp": "2025-12-13T18:14:43.483Z"
+        }
+      ],
+      "tokens": {
+        "input": 10853,
+        "output": 8,
+        "cached": 0,
+        "thoughts": 21,
+        "tool": 0,
+        "total": 10882
+      },
+      "model": "gemini-2.5-flash"
+    },
+    {
+      "id": "6c208fab-7b01-4ff9-83b2-ff8b1ecc364b",
+      "timestamp": "2025-12-13T18:14:50.485Z",
+      "type": "user",
+      "content": "hi"
+    },
+    {
+      "id": "b0ed3db5-7eaf-4815-83e6-7a3bfd37d207",
+      "timestamp": "2025-12-13T18:14:50.973Z",
+      "type": "error",
+      "content": "[API Error: You have exhausted your daily quota on this model.]"
+    }
+  ],
+  "summary": "Initiate conversation",
+  "source": "legion-windows"
+}

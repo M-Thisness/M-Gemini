@@ -1,0 +1,33 @@
+{
+  "sessionId": "181ebe6d-2a7c-4790-9dff-ec565c1c72b5",
+  "projectHash": "c2d2cd48efcbba4c2bc221e72bcce69434e9ae8cd4d927badfe83e3426b39c95",
+  "startTime": "2025-12-10T03:53:19.220Z",
+  "lastUpdated": "2025-12-10T03:53:47.593Z",
+  "messages": [
+    {
+      "id": "680c1811-ccc4-4e60-b1bd-4e0ebd91ebe2",
+      "timestamp": "2025-12-10T03:53:19.221Z",
+      "type": "user",
+      "content": "what is my quota?"
+    },
+    {
+      "id": "5951fcb4-6cba-4dd6-a8a2-54368bd2afbc",
+      "timestamp": "2025-12-10T03:53:20.175Z",
+      "type": "error",
+      "content": "[API Error: You have exhausted your daily quota on this model.]"
+    },
+    {
+      "id": "5ea0d1f3-1cb2-47f3-8b55-c3f046b129a8",
+      "timestamp": "2025-12-10T03:53:46.970Z",
+      "type": "user",
+      "content": "quota"
+    },
+    {
+      "id": "207e3550-4b50-45b6-aabf-9b7481f5d5b4",
+      "timestamp": "2025-12-10T03:53:47.593Z",
+      "type": "error",
+      "content": "[API Error: You have exhausted your daily quota on this model.]"
+    }
+  ],
+  "source": "legion-windows"
+}

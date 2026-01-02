@@ -1,0 +1,57 @@
+{
+  "sessionId": "2fd368e7-4212-4891-b281-f4ba6f950507",
+  "projectHash": "c2d2cd48efcbba4c2bc221e72bcce69434e9ae8cd4d927badfe83e3426b39c95",
+  "startTime": "2025-12-08T17:48:15.994Z",
+  "lastUpdated": "2025-12-08T17:49:17.426Z",
+  "messages": [
+    {
+      "id": "175c9996-f9eb-40ae-878d-9a899b56d42c",
+      "timestamp": "2025-12-08T17:48:15.994Z",
+      "type": "user",
+      "content": "model"
+    },
+    {
+      "id": "6f62c99a-54af-4fc0-be7a-e1d0bc91fd25",
+      "timestamp": "2025-12-08T17:48:16.826Z",
+      "type": "error",
+      "content": "[API Error: You have exhausted your daily quota on this model.]"
+    },
+    {
+      "id": "cf32ecc8-6d9a-4671-8389-a17a97d870cd",
+      "timestamp": "2025-12-08T17:48:30.294Z",
+      "type": "info",
+      "content": "Current workspace directories:\n- C:\\Users\\Mischa"
+    },
+    {
+      "id": "c8734665-24ab-409f-91f4-ed4408c5ea98",
+      "timestamp": "2025-12-08T17:49:00.718Z",
+      "type": "info",
+      "content": "Successfully added GEMINI.md files from the following directories if there are:\n- C:"
+    },
+    {
+      "id": "c33f6e32-79fd-4077-bde6-c733795b3c62",
+      "timestamp": "2025-12-08T17:49:00.730Z",
+      "type": "info",
+      "content": "Successfully added directories:\n- C:"
+    },
+    {
+      "id": "a7bffb4f-90f0-427e-9328-3e42721d1902",
+      "timestamp": "2025-12-08T17:49:07.690Z",
+      "type": "error",
+      "content": "\ud83d\udd34 Disconnected: Failed to connect to IDE companion extension. Please ensure the extension is running. To install the extension, run /ide install."
+    },
+    {
+      "id": "917b8c5c-0031-4e00-9b86-509b75d1df99",
+      "timestamp": "2025-12-08T17:49:17.362Z",
+      "type": "info",
+      "content": "Installing IDE companion..."
+    },
+    {
+      "id": "b0669d41-e2ab-4984-8799-1048ffcbb597",
+      "timestamp": "2025-12-08T17:49:17.426Z",
+      "type": "error",
+      "content": "agy not found. Please ensure it is in your system's PATH."
+    }
+  ],
+  "source": "legion-windows"
+}

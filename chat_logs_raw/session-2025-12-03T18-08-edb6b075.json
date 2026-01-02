@@ -1,0 +1,21 @@
+{
+  "sessionId": "edb6b075-7f0f-4492-8058-296df86e0f56",
+  "projectHash": "c2d2cd48efcbba4c2bc221e72bcce69434e9ae8cd4d927badfe83e3426b39c95",
+  "startTime": "2025-12-03T18:21:53.966Z",
+  "lastUpdated": "2025-12-03T18:21:53.979Z",
+  "messages": [
+    {
+      "id": "91642de4-fb24-4352-9c18-fb4a0926143c",
+      "timestamp": "2025-12-03T18:21:53.966Z",
+      "type": "info",
+      "content": "\n\nCode Assist login required.\nAttempting to open authentication page in your browser.\nOtherwise navigate to:\n\nhttps://accounts.google.com/o/oauth2/v2/auth?redirect_uri=http%3A%2F%2Flocalhost%3A56480%2Foauth2callback&access_type=offline&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&state=4b88cbaee3ca53afbf374035c9cb54f27f97d77a3300b3da43f339dedc296ba8&response_type=code&client_id=681255809395-oo8ft2oprdrnp9e3aqf6av3hmdib135j.apps.googleusercontent.com\n\n\n"
+    },
+    {
+      "id": "23f35fbd-171b-4ffd-af0b-fbae02eeb938",
+      "timestamp": "2025-12-03T18:21:53.979Z",
+      "type": "info",
+      "content": "Waiting for authentication...\n"
+    }
+  ],
+  "source": "legion-windows"
+}

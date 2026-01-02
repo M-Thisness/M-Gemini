@@ -1,0 +1,15 @@
+{
+  "sessionId": "34e0660b-7b9c-42a7-89ce-eaebbb035670",
+  "projectHash": "28f709d79730058e2a461518e34126da18ceda07729e792c92f7ca1251e730bf",
+  "startTime": "2025-12-20T05:23:15.944Z",
+  "lastUpdated": "2025-12-20T05:23:15.944Z",
+  "messages": [
+    {
+      "id": "3a5fda85-0e25-479b-a5d8-35f0465e9164",
+      "timestamp": "2025-12-20T05:23:15.944Z",
+      "type": "error",
+      "content": "Automatic update failed. Please try updating manually"
+    }
+  ],
+  "source": "legion-windows"
+}

@@ -1,0 +1,79 @@
+{
+  "sessionId": "30606aa5-ce34-4820-b94e-3b0dccf0ddfb",
+  "projectHash": "c2d2cd48efcbba4c2bc221e72bcce69434e9ae8cd4d927badfe83e3426b39c95",
+  "startTime": "2025-12-12T23:27:58.317Z",
+  "lastUpdated": "2025-12-13T00:37:57.857Z",
+  "messages": [
+    {
+      "id": "78e6316d-6f9c-4eb2-a411-a1adddaabf67",
+      "timestamp": "2025-12-12T23:27:58.317Z",
+      "type": "user",
+      "content": "hi"
+    },
+    {
+      "id": "b399c2e9-1fbc-4c71-979f-4bbbd4ec7af8",
+      "timestamp": "2025-12-12T23:28:12.658Z",
+      "type": "gemini",
+      "content": "Hello! I'm ready for your first command. How can I help you today?",
+      "thoughts": [],
+      "tokens": {
+        "input": 10829,
+        "output": 18,
+        "cached": 0,
+        "thoughts": 0,
+        "tool": 0,
+        "total": 10847
+      },
+      "model": "gemini-2.5-flash"
+    },
+    {
+      "id": "767683a3-b191-435a-9d44-291dac947cde",
+      "timestamp": "2025-12-12T23:28:44.741Z",
+      "type": "user",
+      "content": "hi"
+    },
+    {
+      "id": "527a3b2d-c6f6-44a7-86a5-f569f9ee6124",
+      "timestamp": "2025-12-12T23:28:54.614Z",
+      "type": "info",
+      "content": "Gemini CLI update available! 0.20.1 \u2192 0.20.2\nInstalled with npm. Attempting to automatically update now..."
+    },
+    {
+      "id": "ce0e4cf3-4cf9-40ea-8d4a-ac6f2ce1ca2f",
+      "timestamp": "2025-12-12T23:28:55.525Z",
+      "type": "error",
+      "content": "[API Error: You have exhausted your daily quota on this model.]"
+    },
+    {
+      "id": "8e078c22-2ad7-4d1f-8ac3-e0d7f6a70239",
+      "timestamp": "2025-12-12T23:29:38.265Z",
+      "type": "user",
+      "content": "view C:\\Users\\Mischa\\AppData\\Local\\Temp\\gemini-client-error-Turn.run-sendMessageStream-2025-12-12T23-28-55-524Z.json"
+    },
+    {
+      "id": "231e83a0-7a0d-4a50-8af6-5a5065d4ba84",
+      "timestamp": "2025-12-12T23:29:39.213Z",
+      "type": "error",
+      "content": "[API Error: You have exhausted your daily quota on this model.]"
+    },
+    {
+      "id": "8ab830bc-899d-4adb-a7f6-43cc5306e32f",
+      "timestamp": "2025-12-12T23:31:50.310Z",
+      "type": "info",
+      "content": "Update successful! The new version will be used on your next run."
+    },
+    {
+      "id": "1293d6ad-ac0d-47aa-8ed9-32bf35ad698b",
+      "timestamp": "2025-12-13T00:37:56.992Z",
+      "type": "user",
+      "content": "hi"
+    },
+    {
+      "id": "090aba7a-107c-4fce-b2fb-2cd16398360e",
+      "timestamp": "2025-12-13T00:37:57.857Z",
+      "type": "error",
+      "content": "[API Error: You have exhausted your daily quota on this model.]"
+    }
+  ],
+  "source": "legion-windows"
+}

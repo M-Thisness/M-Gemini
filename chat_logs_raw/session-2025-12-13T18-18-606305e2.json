@@ -1,0 +1,49 @@
+{
+  "sessionId": "606305e2-b29b-435b-af15-7cbe5afca2ee",
+  "projectHash": "e92cf9b749774667028a1d86108c48072ca5ad5c31e350be6b8137f50caf112f",
+  "startTime": "2025-12-13T18:20:22.104Z",
+  "lastUpdated": "2025-12-13T18:21:40.403Z",
+  "messages": [
+    {
+      "id": "073fcbf5-dd2e-4d03-b573-2f27fb07088b",
+      "timestamp": "2025-12-13T18:20:22.104Z",
+      "type": "user",
+      "content": "hi"
+    },
+    {
+      "id": "aaef7dd0-6525-4264-bbcd-d9b636538d0a",
+      "timestamp": "2025-12-13T18:20:24.000Z",
+      "type": "gemini",
+      "content": "Hi there! How can I help you today?",
+      "thoughts": [
+        {
+          "subject": "Acknowledge and Inquire",
+          "description": "\"Hi,\" the user said. Now, I must shift my focus to understanding how I can be of service. With this new information, I'm ready to learn more about their needs. What can I do for them?",
+          "timestamp": "2025-12-13T18:20:23.655Z"
+        }
+      ],
+      "tokens": {
+        "input": 15500,
+        "output": 9,
+        "cached": 0,
+        "thoughts": 57,
+        "tool": 0,
+        "total": 15566
+      },
+      "model": "gemini-2.5-flash"
+    },
+    {
+      "id": "18ab7b5a-6d1b-4ca8-bcbb-c31f3730d325",
+      "timestamp": "2025-12-13T18:21:40.029Z",
+      "type": "user",
+      "content": "hi again"
+    },
+    {
+      "id": "66247c84-fd93-4d66-b31f-aaeeba791e95",
+      "timestamp": "2025-12-13T18:21:40.403Z",
+      "type": "error",
+      "content": "[API Error: You have exhausted your daily quota on this model.]"
+    }
+  ],
+  "source": "legion-windows"
+}
