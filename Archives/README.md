@@ -21,10 +21,11 @@ The following automated pipeline ensures your local CLI sessions are safely back
 *   **Workflow:** `.github/workflows/process_logs.yml`
 *   **Trigger:** Pushing files to `Archives/`.
 *   **Steps:**
-    1.  **Parse JSON:** The workflow runs `scripts/convert_to_markdown.py`. This script reads every JSON file and generates a companion `.md` file in the same folder.
-    2.  **Generate Journals:** `scripts/generate_journals.py` processes the logs to create daily engineering field logs in `journals/`.
-    3.  **Combine Logs:** `scripts/combine_chat_logs.py` aggregates all markdown files into the master `FULL_CHAT_LOG.md`.
-    4.  **Commit:** The workflow automatically commits the new Markdown files back to the repo.
+    1.  **Process Everything:** The workflow runs `scripts/process_logs.py`. This single script handles:
+        *   **Converting JSON to Markdown:** Reading every JSON file and generating a companion `.md` file.
+        *   **Generating Journals:** Creating daily engineering field logs in `journals/`.
+        *   **Combining Logs:** Aggregating all markdown files into the master `FULL_CHAT_LOG.md`.
+    2.  **Commit:** The workflow automatically commits the new Markdown files back to the repo.
 
 ---
 
